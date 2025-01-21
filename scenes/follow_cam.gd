@@ -1,5 +1,7 @@
 extends Camera2D
 
+class_name FollowCam
+
 @export var tilemap : TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():

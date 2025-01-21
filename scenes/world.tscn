@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://bxfy8tybt3wco"]
+[gd_scene load_steps=13 format=3 uid="uid://bxfy8tybt3wco"]
 
 [ext_resource type="Texture2D" uid="uid://j4k2s7byad7u" path="res://Arts/TilesetFloor.png" id="1_5md0u"]
+[ext_resource type="Script" path="res://scenes/world.gd" id="1_eas0a"]
 [ext_resource type="PackedScene" uid="uid://bjbd074eojfmk" path="res://player/player.tscn" id="1_oonga"]
 [ext_resource type="Texture2D" uid="uid://dxyvnhpjqw2dm" path="res://Arts/TilesetNature.png" id="2_8k2dt"]
 [ext_resource type="Texture2D" uid="uid://h124n7orhs4" path="res://Arts/animated flower.png" id="3_ysek2"]
@@ -1499,6 +1500,7 @@ sources/1 = SubResource("TileSetAtlasSource_m0xne")
 sources/3 = SubResource("TileSetAtlasSource_8ttpa")
 
 [node name="World" type="Node2D"]
+script = ExtResource("1_eas0a")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1516,6 +1518,7 @@ layer_2/tile_data = PackedInt32Array(65543, 131073, 0, 589834, 131073, 0, 196620
 [node name="Player" parent="TileMap" instance=ExtResource("1_oonga")]
 position = Vector2(120, 69)
 scale = Vector2(1.1595, 1.00709)
+speed = 75
 
 [node name="follow cam" type="Camera2D" parent="TileMap/Player" node_paths=PackedStringArray("tilemap")]
 limit_left = 0
@@ -1549,9 +1552,3 @@ position = Vector2(-88, 8)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("7_pw03u")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -52.0
-offset_right = 0.0
-grow_horizontal = 0

@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Slime
+
 @export var speed = 20
 @export var limit = 0.5
 @export var endPoint: Marker2D
