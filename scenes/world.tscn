@@ -1525,6 +1525,8 @@ limit_left = 0
 limit_top = 0
 limit_right = 480
 limit_bottom = 288
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 script = ExtResource("5_kpfeh")
 tilemap = NodePath("../..")
 
