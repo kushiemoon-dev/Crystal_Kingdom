@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjbd074eojfmk"]
+[gd_scene load_steps=15 format=3 uid="uid://bjbd074eojfmk"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_0m06o"]
 [ext_resource type="Texture2D" uid="uid://iq575qoxfhyh" path="res://Arts/player sprites.png" id="1_o2450"]
+[ext_resource type="Resource" uid="uid://dx3xglrh0ba13" path="res://inventory/Items/playerInventory.tres" id="2_rsvxd"]
 [ext_resource type="Animation" uid="uid://cdiar4gyxkk83" path="res://movement/walkDown.res" id="3_n2eqn"]
 [ext_resource type="Animation" uid="uid://bwp8cavdmgebt" path="res://movement/walkLeft.res" id="4_135y6"]
 [ext_resource type="Animation" uid="uid://bub8wf5h3pjh" path="res://movement/walkRight.res" id="5_mu225"]
@@ -99,6 +100,7 @@ z_index = 1
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_0m06o")
+Inventory = ExtResource("2_rsvxd")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 clip_children = 2
