@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://j6f0fjdm4mdg"]
+
+[ext_resource type="Texture2D" uid="uid://bac4w60x3at6d" path="res://Arts/BigSword.png" id="1_e420c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4qm8"]
+size = Vector2(4, 11)
+
+[node name="sword" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("1_e420c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_w4qm8")
