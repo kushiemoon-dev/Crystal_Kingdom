@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Inventory" load_steps=5 format=3 uid="uid://dx3xglrh0ba13"]
 
 [ext_resource type="Script" path="res://inventory/inventoryItem.gd" id="1_ehb4g"]
-[ext_resource type="Resource" path="res://inventory/Items/lifepot.tres" id="2_ncaek"]
-[ext_resource type="Resource" uid="uid://cecvtclu16npe" path="res://inventory/Items/sword.tres" id="3_kg5v5"]
+[ext_resource type="Resource" uid="uid://bt41s2ot3bdc" path="res://inventory/Items/lifepot.tres" id="2_bclr5"]
+[ext_resource type="Resource" uid="uid://cecvtclu16npe" path="res://inventory/Items/sword.tres" id="3_ll2bb"]
 [ext_resource type="Script" path="res://inventory/inventory.gd" id="4_7us25"]
 
 [resource]
 script = ExtResource("4_7us25")
-items = Array[ExtResource("1_ehb4g")]([ExtResource("2_ncaek"), ExtResource("2_ncaek"), ExtResource("3_kg5v5"), null, ExtResource("2_ncaek"), null, ExtResource("2_ncaek"), ExtResource("2_ncaek"), null, null])
+items = Array[ExtResource("1_ehb4g")]([ExtResource("2_bclr5"), ExtResource("2_bclr5"), null, null, null, null, null, ExtResource("3_ll2bb"), null, null, null, ExtResource("3_ll2bb"), null, null, null])

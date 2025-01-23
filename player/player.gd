@@ -16,7 +16,7 @@ signal healthChanged
 
 @export var knockbackPower: int = 500
 
-@export var Inventory : Inventory
+@export var inventory : Inventory
 
 var isHurt : bool = false
 
@@ -73,7 +73,7 @@ func hurtByEnnemy(area):
 
 func _on_hurt_box_area_entered(area:): 
 	if area.has_method("collect"):
-		area.collect()
+		area.collect(inventory)
 		
 func knockback(EnnemyVelocity : Vector2):
 	var knockbackDirection = (EnnemyVelocity - velocity).normalized() * knockbackPower
