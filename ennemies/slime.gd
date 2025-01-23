@@ -6,10 +6,14 @@ class_name Slime
 @export var limit = 0.5
 @export var endPoint: Marker2D
 
+@export var knockbackPower: int = 500
+
 @onready var animations = $AnimationPlayer
 
 var startPosition
 var endPosition
+
+var isDead : bool = false
 
 func _ready():
 	startPosition = position
@@ -40,6 +44,17 @@ func updateAnimation():
 		animations.play("walk" + direction)
 	
 func _physics_process(delta):
+	if isDead: return
 	updateVelocity()
 	move_and_slide()
 	updateAnimation()
+
+
+func _on_hurt_box_area_entered(area: Area2D) -> void:
+	if area == $hitBox : return
+	$hitBox.set_deferred("monitorable", false) 
+	isDead = true
+	animations.play("death")
+	await animations.animation_finished
+	queue_free()
+	
