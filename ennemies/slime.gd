@@ -6,7 +6,8 @@ class_name Slime
 @export var limit = 0.5
 @export var endPoint: Marker2D
 
-@export var knockbackPower: int = 500
+
+@export var knockbackPower: int = 1000
 
 @onready var animations = $AnimationPlayer
 
@@ -52,9 +53,14 @@ func _physics_process(delta):
 
 func _on_hurt_box_area_entered(area: Area2D) -> void:
 	if area == $hitBox : return
+	knockback()
 	$hitBox.set_deferred("monitorable", false) 
 	isDead = true
 	animations.play("death")
 	await animations.animation_finished
 	queue_free()
 	
+func knockback():
+	var knockbackDirection = -velocity.normalized() * knockbackPower
+	velocity = knockbackDirection
+	move_and_slide()
