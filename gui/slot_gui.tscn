@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpep1f4cudgj7"]
+
+[ext_resource type="Script" path="res://gui/slot_gui.gd" id="1_0fuab"]
+[ext_resource type="Texture2D" uid="uid://clv2vsna4lim8" path="res://Arts/inventorySlot.png" id="1_w2740"]
+[ext_resource type="FontFile" uid="uid://bkmna8tyt22xe" path="res://Arts/NormalFont.ttf" id="3_usury"]
+
+[node name="Slot" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+offset_right = 20.0
+offset_bottom = 20.0
+script = ExtResource("1_0fuab")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_w2740")
+centered = false
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/Panel"]
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+custom_minimum_size = Vector2(11, 14)
+layout_mode = 2
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 9.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_usury")
+theme_override_font_sizes/font_size = 8
+text = "99"
+horizontal_alignment = 2
